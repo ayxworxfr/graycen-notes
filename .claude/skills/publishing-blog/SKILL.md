@@ -51,11 +51,11 @@ git rev-parse --show-toplevel
 
 ### 2. 处理文章输入
 
-如果用户直接贴文章内容，先读取 [intake-post.md](references/intake-post.md)，创建或更新 `src/content/posts/<slug>.md`。
+如果用户直接贴文章内容，先读取 [intake-post.md](references/intake-post.md)，按月份目录加主题创建或更新 `src/content/posts/YYYYMM/<topic-slug>.md`。
 
 如果缺少标题、slug、摘要、标签、分类等发布信息，一次性询问用户补齐，不要自行编造。
 
-阻断条件：目标文件已存在但用户没有确认覆盖或编辑时，不允许写入。
+阻断条件：生成文件名后没有检查同名文件和同名目录冲突时，不允许写入。
 
 ### 3. 选择发布模式
 
@@ -92,6 +92,8 @@ pnpm publish-blog --full "Publish blog updates"
 
 - [ ] 当前仓库是 Graycen Notes
 - [ ] 如果用户贴了文章，已创建或更新目标文章文件
+- [ ] 新文章路径使用 `YYYYMM/<topic-slug>.md` 格式
+- [ ] 已检查文章文件名冲突
 - [ ] 缺失发布信息已一次性询问并补齐
 - [ ] 已根据用户信号选择快速发布或全流程发布
 - [ ] 快速发布没有触碰构建配置、组件、workflow、依赖或部署路径
@@ -111,6 +113,7 @@ pnpm publish-blog --full "Publish blog updates"
 - 全流程发布中 `pnpm build` 失败
 - 文章仍是 `draft: true`
 - 用户贴文缺少必要 frontmatter 信息且尚未补齐
+- 新文章文件名与已有文件或目录冲突且用户尚未确认处理方式
 
 ### Final Gate
 
