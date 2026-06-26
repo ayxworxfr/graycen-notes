@@ -1,99 +1,123 @@
-# 🍥Fuwari  
-![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen) 
-![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue) 
-[![DeepWiki](https://img.shields.io/badge/DeepWiki-saicaca%2Ffuwari-blue.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAyCAYAAAAnWDnqAAAAAXNSR0IArs4c6QAAA05JREFUaEPtmUtyEzEQhtWTQyQLHNak2AB7ZnyXZMEjXMGeK/AIi+QuHrMnbChYY7MIh8g01fJoopFb0uhhEqqcbWTp06/uv1saEDv4O3n3dV60RfP947Mm9/SQc0ICFQgzfc4CYZoTPAswgSJCCUJUnAAoRHOAUOcATwbmVLWdGoH//PB8mnKqScAhsD0kYP3j/Yt5LPQe2KvcXmGvRHcDnpxfL2zOYJ1mFwrryWTz0advv1Ut4CJgf5uhDuDj5eUcAUoahrdY/56ebRWeraTjMt/00Sh3UDtjgHtQNHwcRGOC98BJEAEymycmYcWwOprTgcB6VZ5JK5TAJ+fXGLBm3FDAmn6oPPjR4rKCAoJCal2eAiQp2x0vxTPB3ALO2CRkwmDy5WohzBDwSEFKRwPbknEggCPB/imwrycgxX2NzoMCHhPkDwqYMr9tRcP5qNrMZHkVnOjRMWwLCcr8ohBVb1OMjxLwGCvjTikrsBOiA6fNyCrm8V1rP93iVPpwaE+gO0SsWmPiXB+jikdf6SizrT5qKasx5j8ABbHpFTx+vFXp9EnYQmLx02h1QTTrl6eDqxLnGjporxl3NL3agEvXdT0WmEost648sQOYAeJS9Q7bfUVoMGnjo4AZdUMQku50McDcMWcBPvr0SzbTAFDfvJqwLzgxwATnCgnp4wDl6Aa+Ax283gghmj+vj7feE2KBBRMW3FzOpLOADl0Isb5587h/U4gGvkt5v60Z1VLG8BhYjbzRwyQZemwAd6cCR5/XFWLYZRIMpX39AR0tjaGGiGzLVyhse5C9RKC6ai42ppWPKiBagOvaYk8lO7DajerabOZP46Lby5wKjw1HCRx7p9sVMOWGzb/vA1hwiWc6jm3MvQDTogQkiqIhJV0nBQBTU+3okKCFDy9WwferkHjtxib7t3xIUQtHxnIwtx4mpg26/HfwVNVDb4oI9RHmx5WGelRVlrtiw43zboCLaxv46AZeB3IlTkwouebTr1y2NjSpHz68WNFjHvupy3q8TFn3Hos2IAk4Ju5dCo8B3wP7VPr/FGaKiG+T+v+TQqIrOqMTL1VdWV1DdmcbO8KXBz6esmYWYKPwDL5b5FA1a0hwapHiom0r/cKaoqr+27/XcrS5UwSMbQAAAABJRU5ErkJggg==)](https://deepwiki.com/saicaca/fuwari)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsaicaca%2Ffuwari.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsaicaca%2Ffuwari?ref=badge_shield&issueType=license)
+# Graycen Notes
 
-A static blog template built with [Astro](https://astro.build).
+Graycen 的个人博客，用来记录技术实践、产品想法和日常思考。
 
-[**🖥️ Live Demo (Vercel)**](https://fuwari.vercel.app)
+这个项目基于 [Astro](https://astro.build) 和 Fuwari 主题改造，内容以 Markdown / MDX 为主，构建产物是静态站点。站点支持文章归档、搜索、目录、RSS、数学公式、代码高亮、GitHub 风格提示块和深浅色主题。
 
-![Preview Image](https://raw.githubusercontent.com/saicaca/resource/main/fuwari/home.png)
+## 技术栈
 
-🌏 README in
-[**中文**](https://github.com/saicaca/fuwari/blob/main/docs/README.zh-CN.md) /
-[**日本語**](https://github.com/saicaca/fuwari/blob/main/docs/README.ja.md) /
-[**한국어**](https://github.com/saicaca/fuwari/blob/main/docs/README.ko.md) /
-[**Español**](https://github.com/saicaca/fuwari/blob/main/docs/README.es.md) /
-[**ไทย**](https://github.com/saicaca/fuwari/blob/main/docs/README.th.md) /
-[**Tiếng Việt**](https://github.com/saicaca/fuwari/blob/main/docs/README.vi.md) /
-[**Bahasa Indonesia**](https://github.com/saicaca/fuwari/blob/main/docs/README.id.md) (Provided by the community and may not always be up-to-date)
+- Astro 5
+- Svelte 5
+- Tailwind CSS
+- TypeScript
+- Biome
+- Pagefind
+- Expressive Code
 
-## ✨ Features
+## 项目结构
 
-- [x] Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com)
-- [x] Smooth animations and page transitions
-- [x] Light / dark mode
-- [x] Customizable theme colors & banner
-- [x] Responsive design
-- [x] Search functionality with [Pagefind](https://pagefind.app/)
-- [x] [Markdown extended features](https://github.com/saicaca/fuwari?tab=readme-ov-file#-markdown-extended-syntax)
-- [x] Table of contents
-- [x] RSS feed
+```text
+.
+├── src/
+│   ├── config.ts          # 站点、导航、个人资料和许可证配置
+│   ├── content/
+│   │   ├── posts/         # 博客文章
+│   │   ├── spec/          # 独立页面内容，例如关于页
+│   │   └── config.ts      # 内容集合定义
+│   ├── pages/             # Astro 页面入口
+│   ├── components/        # 页面组件
+│   └── plugins/           # Markdown / rehype / Expressive Code 插件
+├── public/                # 静态资源
+├── scripts/
+│   └── new-post.js        # 新文章脚本
+├── astro.config.mjs       # Astro 构建配置
+└── package.json
+```
 
-## 🚀 Getting Started
+## 本地开发
 
-1. Create your blog repository:
-    - [Generate a new repository](https://github.com/saicaca/fuwari/generate) from this template or fork this repository.
-    - Or run one of the following commands:
-       ```sh
-       npm create fuwari@latest
-       yarn create fuwari
-       pnpm create fuwari@latest
-       bun create fuwari@latest
-       deno run -A npm:create-fuwari@latest
-       ```
-2. To edit your blog locally, clone your repository, run `pnpm install` to install dependencies.
-    - Install [pnpm](https://pnpm.io) `npm install -g pnpm` if you haven't.
-3. Edit the config file `src/config.ts` to customize your blog.
-4. Run `pnpm new-post <filename>` to create a new post and edit it in `src/content/posts/`.
-5. Deploy your blog to Vercel, Netlify, GitHub Pages, etc. following [the guides](https://docs.astro.build/en/guides/deploy/). You need to edit the site configuration in `astro.config.mjs` before deployment.
+项目使用 pnpm。首次启动前先安装依赖：
 
-## 📝 Frontmatter of Posts
+```sh
+pnpm install
+```
+
+启动开发服务器：
+
+```sh
+pnpm dev
+```
+
+默认本地地址是 `http://localhost:4321`。
+
+## 写文章
+
+新建文章：
+
+```sh
+pnpm new-post <filename>
+```
+
+文章会放在 `src/content/posts/` 下。常用 frontmatter：
 
 ```yaml
 ---
-title: My First Blog Post
-published: 2023-09-09
-description: This is the first post of my new Astro blog.
+title: 文章标题
+published: 2026-01-01
+description: 文章摘要
 image: ./cover.jpg
-tags: [Foo, Bar]
-category: Front-end
+tags: [Astro, Notes]
+category: 技术
 draft: false
-lang: jp      # Set only if the post's language differs from the site's language in `config.ts`
 ---
 ```
 
-## 🧩 Markdown Extended Syntax
+字段说明：
 
-In addition to Astro's default support for [GitHub Flavored Markdown](https://github.github.com/gfm/), several extra Markdown features are included:
+- `title`：文章标题
+- `published`：发布时间
+- `description`：文章摘要，用于列表和 SEO
+- `image`：封面图，可选
+- `tags`：标签
+- `category`：分类
+- `draft`：是否为草稿，`true` 时不作为正式文章发布
 
-- Admonitions ([Preview and Usage](https://fuwari.vercel.app/posts/markdown-extended/#admonitions))
-- GitHub repository cards ([Preview and Usage](https://fuwari.vercel.app/posts/markdown-extended/#github-repository-cards))
-- Enhanced code blocks with Expressive Code ([Preview](https://fuwari.vercel.app/posts/expressive-code/) / [Docs](https://expressive-code.com/))
+## 常用命令
 
-## ⚡ Commands
+| 命令 | 说明 |
+| --- | --- |
+| `pnpm dev` | 启动本地开发服务器 |
+| `pnpm build` | 构建静态站点，并生成 Pagefind 搜索索引 |
+| `pnpm preview` | 本地预览构建结果 |
+| `pnpm check` | 运行 Astro 检查 |
+| `pnpm type-check` | 运行 TypeScript 类型检查 |
+| `pnpm format` | 使用 Biome 格式化 `src` |
+| `pnpm lint` | 使用 Biome 检查并修复 `src` |
+| `pnpm new-post <filename>` | 创建新文章 |
 
-All commands are run from the root of the project, from a terminal:
+## 内容能力
 
-| Command                    | Action                                              |
-|:---------------------------|:----------------------------------------------------|
-| `pnpm install`             | Installs dependencies                               |
-| `pnpm dev`                 | Starts local dev server at `localhost:4321`         |
-| `pnpm build`               | Build your production site to `./dist/`             |
-| `pnpm preview`             | Preview your build locally, before deploying        |
-| `pnpm check`               | Run checks for errors in your code                  |
-| `pnpm format`              | Format your code using Biome                        |
-| `pnpm new-post <filename>` | Create a new post                                   |
-| `pnpm astro ...`           | Run CLI commands like `astro add`, `astro check`    |
-| `pnpm astro --help`        | Get help using the Astro CLI                        |
+- Markdown 文章与独立页面
+- 自动阅读时间和摘要
+- 右侧文章目录
+- RSS 与 sitemap
+- Pagefind 站内搜索
+- KaTeX 数学公式
+- Expressive Code 代码块增强
+- GitHub admonitions 提示块
+- GitHub 仓库卡片组件
 
-## ✏️ Contributing
+## 部署
 
-Check out the [Contributing Guide](https://github.com/saicaca/fuwari/blob/main/CONTRIBUTING.md) for details on how to contribute to this project.
+当前 CI 配置在 `.github/workflows/`：
 
-## 📄 License
+- `biome.yml`：在 `main` 分支 push / PR 时运行 Biome、Astro 检查和构建；push 时部署 GitHub Pages。
+- `cloudflare-pages.yml`：在 `main` 分支 push 或手动触发时构建并部署 Cloudflare Pages。
 
-This project is licensed under the MIT License.
+构建输出目录是 `dist/`。
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsaicaca%2Ffuwari.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsaicaca%2Ffuwari?ref=badge_large&issueType=license)
+## 许可证
+
+站点内容默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)。
+
+主题基础来自 [Fuwari](https://github.com/saicaca/fuwari)，原项目使用 MIT License。
