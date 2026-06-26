@@ -25,7 +25,7 @@ Cloudflare 提供了一个优雅的解法：**Pages + Workers + D1/KV**，前后
 
 > 无需编码，修改配置文件 5 分钟快速构建自己的 APP 宣传页
 
-![APP 推广页示例](https://i-blog.csdnimg.cn/direct/80327a03390745a88cc65a34773be511.png)
+![APP 推广页示例](./cloudflare-indie-fullstack-screenshot.png)
 
 ---
 
