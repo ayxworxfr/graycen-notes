@@ -1,6 +1,6 @@
 # 关于
 
-我是 **Graycen**，独立开发者，主要做 AI 应用基础设施、跨端客户端和后端脚手架。
+我是 **Graycen**，独立开发者，围绕 AI Agent、跨端应用与后端基建维护可复用的开源脚手架。
 
 这个博客记录我在 **AI 辅助开发**、**独立产品落地** 和 **工程实践** 上的思考——不是教程搬运，而是自己踩坑、验证、沉淀下来的东西。
 
@@ -18,19 +18,19 @@
 
 下面是我维护的几个仓库，欢迎 Star 和 Issue。
 
-### MusicLab
-
-独立产品的推广页与落地页实践，基于 Cloudflare Pages 部署。
-
-::github{repo="ayxworxfr/musiclab"}
-
-在线预览：[musiclab.pages.dev](https://musiclab.pages.dev/zh)
-
 ### AstraCoreAI
 
 企业级 Python AI Agent 框架，Clean Architecture + Ports & Adapters。内置 Skills 按需加载、分层记忆、Human-in-the-Loop、MCP 工具、定时任务、并行 Agent 与 DAG 工作流，同一套业务逻辑可通过 Python SDK 或 FastAPI 服务运行。
 
 ::github{repo="ayxworxfr/AstraCoreAI"}
+
+### Indie Launch Kit
+
+独立产品的推广页与落地页实践，基于 Cloudflare Pages 部署。
+
+::github{repo="ayxworxfr/indie-launch-kit"}
+
+在线预览：[musiclab.pages.dev](https://musiclab.pages.dev/zh)
 
 ### Go Admin
 
