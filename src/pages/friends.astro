@@ -1,0 +1,29 @@
+---
+import FriendCard from "@components/FriendCard.astro";
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import { Icon } from "astro-icon/components";
+import { friends } from "../data/friends";
+---
+<MainGridLayout title="友链" description="Graycen Notes 的朋友们">
+    <section class="card-base mb-4 rounded-[var(--radius-large)] px-6 py-6 md:px-9">
+        <div class="mb-2 flex items-center gap-3">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--primary)] text-white">
+                <Icon name="material-symbols:group-rounded" class="text-[1.5rem]"></Icon>
+            </div>
+            <h1 class="text-2xl font-bold text-90">友链</h1>
+        </div>
+        <p class="text-75">
+            一些值得常去看看的人和站点。
+        </p>
+    </section>
+
+    {friends.length > 0 ? (
+        <div class="grid gap-4 md:grid-cols-2">
+            {friends.map((friend) => <FriendCard friend={friend} />)}
+        </div>
+    ) : (
+        <section class="card-base rounded-[var(--radius-large)] px-6 py-10 text-center text-75">
+            还没有添加友链。
+        </section>
+    )}
+</MainGridLayout>

@@ -40,7 +40,13 @@ export const siteConfig: SiteConfig = {
 };
 
 export const navBarConfig: NavBarConfig = {
-	links: [LinkPreset.Home, LinkPreset.Archive, LinkPreset.About],
+	links: [
+		LinkPreset.Home,
+		LinkPreset.Archive,
+		LinkPreset.Friends,
+		LinkPreset.Tools,
+		LinkPreset.About,
+	],
 };
 
 export const profileConfig: ProfileConfig = {

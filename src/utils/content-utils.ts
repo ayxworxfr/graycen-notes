@@ -2,6 +2,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import { getCategoryUrl } from "@utils/url-utils.ts";
+import getReadingTime from "reading-time";
 
 // // Retrieve posts and sort them by publication date
 async function getRawSortedPosts() {
@@ -47,6 +48,34 @@ export async function getSortedPostsList(): Promise<PostForList[]> {
 
 	return sortedPostsList;
 }
+
+export type SiteStats = {
+	postCount: number;
+	totalWords: number;
+	formattedTotalWords: string;
+};
+
+function formatStatCount(value: number): string {
+	if (value >= 10000) {
+		const formatted = (value / 10000).toFixed(1).replace(/\.0$/, "");
+		return `${formatted}w`;
+	}
+	return String(value);
+}
+
+export async function getSiteStats(): Promise<SiteStats> {
+	const posts = await getRawSortedPosts();
+	const totalWords = posts.reduce((sum, post) => {
+		return sum + getReadingTime(post.body).words;
+	}, 0);
+
+	return {
+		postCount: posts.length,
+		totalWords,
+		formattedTotalWords: formatStatCount(totalWords),
+	};
+}
+
 export type Tag = {
 	name: string;
 	count: number;
