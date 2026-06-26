@@ -29,6 +29,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: Check and build
+    env:
+      ASTRO_SITE: https://ayxworxfr.github.io
+      ASTRO_BASE: /graycen-notes
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       contents: read
       pages: write
@@ -65,4 +71,5 @@ jobs:
 
       - name: Deploy to GitHub Pages
         if: github.event_name == 'push'
+        id: deployment
         uses: actions/deploy-pages@v4

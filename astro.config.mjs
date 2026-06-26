@@ -24,10 +24,13 @@ import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
 
+const site = process.env.ASTRO_SITE ?? "https://fuwari.vercel.app";
+const base = process.env.ASTRO_BASE ?? "/";
+
 // https://astro.build/config
 export default defineConfig({
-	site: "https://fuwari.vercel.app/",
-	base: "/",
+	site,
+	base,
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
