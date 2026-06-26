@@ -30,6 +30,11 @@ Graycen 的个人博客，用来记录技术实践、产品想法和日常思考
 ├── public/                # 静态资源
 ├── scripts/
 │   └── new-post.js        # 新文章脚本
+├── .claude/
+│   └── skills/
+│       └── publishing-blog/
+│           └── scripts/
+│               └── publish-blog.js # 发布博客脚本
 ├── astro.config.mjs       # Astro 构建配置
 └── package.json
 ```
@@ -82,6 +87,20 @@ draft: false
 - `category`：分类
 - `draft`：是否为草稿，`true` 时不作为正式文章发布
 
+发布文章：
+
+```sh
+pnpm publish-blog "Publish blog updates"
+```
+
+默认是快速发布，只提交并推送到 `main`。需要本地检查和构建时使用全流程发布：
+
+```sh
+pnpm publish-blog --full "Publish blog updates"
+```
+
+完整发布流程见项目 skill：`.claude/skills/publishing-blog/SKILL.md`。
+
 ## 常用命令
 
 | 命令 | 说明 |
@@ -94,6 +113,8 @@ draft: false
 | `pnpm format` | 使用 Biome 格式化 `src` |
 | `pnpm lint` | 使用 Biome 检查并修复 `src` |
 | `pnpm new-post <filename>` | 创建新文章 |
+| `pnpm publish-blog "<message>"` | 快速提交并推送博客更新 |
+| `pnpm publish-blog --full "<message>"` | 检查、构建、提交并推送博客更新 |
 
 ## 内容能力
 
