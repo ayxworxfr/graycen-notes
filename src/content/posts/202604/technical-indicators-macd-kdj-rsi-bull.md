@@ -1,6 +1,6 @@
 ---
 title: 技术指标终极指南：MACD、KDJ、RSI与BULL全解析
-published: 2026-06-29
+published: 2026-04-01
 description: 深入解析 MACD、RSI、KDJ、BULL 四大经典技术指标的计算公式、信号解读与共振组合，帮助建立多指标交叉验证的交易体系。
 image: ''
 tags: [MACD, KDJ, RSI, 技术指标, 投资]
