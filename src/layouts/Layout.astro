@@ -127,6 +127,10 @@ const bannerOffset =
 						document.documentElement.classList.remove('dark');
 					}
 			}
+			document.documentElement.setAttribute(
+				'data-theme',
+				document.documentElement.classList.contains('dark') ? 'dark' : 'light',
+			);
 
 			// Load the hue from local storage
 			const hue = localStorage.getItem('hue') || configHue;
@@ -405,6 +409,9 @@ const setup = () => {
 		}
 	})
 	window.swup.hooks.on('content:replace', initCustomScrollbar)
+	window.swup.hooks.on('content:replace', () => {
+		document.dispatchEvent(new Event('astro:after-swap'));
+	})
 	window.swup.hooks.on('visit:start', (visit: {to: {url: string}}) => {
 		// change banner height immediately when a link is clicked
 		const bodyElement = document.querySelector('body')

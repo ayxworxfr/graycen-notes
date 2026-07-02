@@ -4,7 +4,6 @@ import {
 	DEFAULT_THEME,
 	LIGHT_MODE,
 } from "@constants/constants.ts";
-import { expressiveCodeConfig } from "@/config";
 import type { LIGHT_DARK_MODE } from "@/types/config";
 
 export function getDefaultHue(): number {
@@ -44,10 +43,11 @@ export function applyThemeToDocument(theme: LIGHT_DARK_MODE) {
 			break;
 	}
 
-	// Set the theme for Expressive Code
+	// 同步 data-theme，供 astro-mermaid 等集成读取
+	const isDark = document.documentElement.classList.contains("dark");
 	document.documentElement.setAttribute(
 		"data-theme",
-		expressiveCodeConfig.theme,
+		isDark ? "dark" : "light",
 	);
 }
 

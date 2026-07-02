@@ -5,6 +5,7 @@ import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-s
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import swup from "@swup/astro";
 import expressiveCode from "astro-expressive-code";
+import mermaid from "astro-mermaid";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -33,6 +34,30 @@ export default defineConfig({
 	base,
 	trailingSlash: "always",
 	integrations: [
+		mermaid({
+			autoTheme: false,
+			enableLog: false,
+			theme: "base",
+			mermaidConfig: {
+				theme: "base",
+				themeVariables: {
+					background: "transparent",
+					mainBkg: "#eef2ff",
+					fontSize: "14px",
+					fontFamily: "Roboto, sans-serif",
+					primaryColor: "#eef2ff",
+					primaryBorderColor: "#818cf8",
+					primaryTextColor: "#1e293b",
+					lineColor: "#64748b",
+					secondaryColor: "#f1f5f9",
+					tertiaryColor: "#f8fafc",
+					clusterBkg: "#f8fafc",
+					clusterBorder: "#cbd5e1",
+					titleColor: "#334155",
+					edgeLabelBackground: "#ffffff",
+				},
+			},
+		}),
 		tailwind({
 			nesting: true,
 		}),

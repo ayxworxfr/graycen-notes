@@ -117,5 +117,31 @@
         overflow-x: auto;
         margin: 1em 0;
     }
+
+    pre.mermaid {
+        @apply my-4 mx-auto block max-w-full overflow-x-auto border-0 p-0;
+        background: transparent !important;
+        min-height: auto;
+
+        &:not([data-processed]) {
+            min-height: 4rem;
+            background: transparent !important;
+            animation: none !important;
+        }
+
+        &[data-processed] {
+            background: transparent !important;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            background: transparent !important;
+        }
+
+        svg rect.background {
+            fill: transparent !important;
+        }
+    }
     
 }
